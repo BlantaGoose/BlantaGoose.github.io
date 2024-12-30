@@ -14,3 +14,9 @@ body {
   background-color: rgba(204, 204, 204, 0.2666666667);
   font-family: var(--sans-serif);
 }
+
+header .logo {
+  height: 32px;
+  vertical-align: text-bottom;
+  margin-right: 4px;
+}
