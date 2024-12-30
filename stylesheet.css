@@ -89,3 +89,17 @@ article h2::before {
 article header + h2 {
   margin-block-start: 1em;
 }
+
+@media (max-width: 650px) {
+  body {
+    padding: 0;
+    font-size: 0.9rem;
+  }
+  .side-bar {
+    width: 100%;
+    margin: 12px 8px;
+  }
+  main {
+    max-width: 100%;
+  }
+}
