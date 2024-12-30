@@ -9,9 +9,17 @@
   --monospace: Menlo, Consolas, "DejaVu Sans Mono", monospace, var(--emoji);
 }
 
+/*疑似要素周りの設定*/
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+dl dd::before{
+  content: "・";
+  opacity: 0.25;
+  position: absolute;
+  left: -0.8em;
 }
 
 a {
