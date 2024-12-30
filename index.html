@@ -31,23 +31,40 @@
       </article>
     </main>
     <nav class="side-bar">
-      <div class="menu"></div>
-      <div>
-        <a href="/about.html">About</a>
+      <div class="menu">
+        <div>
+          <a href="/about.html">About</a>
+        </div>
+        <input type="checkbox" id="menu-R_tools">
+        <label for="menu-R_tools">
+          "R_tools"
+          ::after
+        </label>
+        <ul>
+          <li>
+            <a href="/R_tools/ggtree">ggtree（製作中）</a>
+          </li>
+          <li>
+            <a href="/R_tools/rphylopic">rphylopic（製作中）</a>
+          </li>
+        </ul>
+        <input type="checkbox" id="Birdwatching">
+        <label for="Birdwatching">
+          "Birdwatching"
+          ::after
+        </label>
+        <ul>
+          <li>
+            <a href="/Birdwatching/Miyagi">宮城</a>
+          </li>
+          <li>
+            <a href="/Birdwatching/Ensei">遠征</a>
+          </li>
+        </ul>
       </div>
-      <input type="checkbox" id="menu-R_tools">
-      <label for="menu-R_tools">
-        "R_tools"
-        
-      </label>
-      <ul>
-        <li>
-          <a href="/R_tools/ggtree">ggtree（製作中）</a>
-        </li>
-        <li>
-          <a href="/R_tools/rphylopic">rphylopic（製作中）</a>
-        </li>
-      </ul>
+      <form action="/search.html" id="search-form">
+        <input type="search" name="q" placeholder="search">
+      </form>
     </nav>
     <footer>
       <small>2024 A.S</small>
