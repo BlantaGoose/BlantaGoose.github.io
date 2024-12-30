@@ -1,56 +1,10 @@
-.title {
-  color: #02ccba;
-}
-
-.bernicla {
-  width: 200px; /* 画像の幅を指定 */
-  height: auto; /* 高さを自動調整 */
-  border: 2px solid black; /* 画像に枠線を追加 */
-  border-radius: 8px; /* 画像の角を丸くする */
-}
-
-main {
-  display: block;
-  padding: 20px;
-}
-
-header {
-  background-color: lightgray;
-  padding: 10px;
-}
-
-h1 {
-  color: darkblue;
-}
-
-article {
-  color: darkblue;
-}
-
-/* ナビゲーションバーの全体的なスタイル */
-nav {
-  background-color: #333; /* 背景色 */
-  padding: 10px; /* 内側の余白 */
-}
-
-/* ナビゲーションリンクのスタイル */
-nav a {
-  color: #fff; /* 文字色 */
-  text-decoration: none; /* 下線を削除 */
-  padding: 10px 15px; /* リンクの内側の余白 */
-  display: inline-block; /* 横並びにする */
-}
-
-/* ホバー時のスタイル */
-nav a:hover {
-  background-color: #575757; /* ホバー時の背景色 */
-  border-radius: 4px; /* 角を丸くする */
-}
-
-.menu label {
-  display: block;
-  position: relative;
-  padding: 10px 6px;
-  font-size: 1.1rem;
-  cursor: pointer;
+:root {
+  color-scheme: light dark;
+  --canvas: #fff;
+  --canvas-text: #444;
+  --color-link: #429131;
+  --emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans Emoji";
+  --serif: Palatino, serif, var(--emoji);
+  --sans-serif: "Segoe UI", "Yu Gothic Medium", system-ui, "HiraginoSans", sans-serif, var(--emoji);
+  --monospace: Menlo, Consolas, "DejaVu Sans Mono", monospace, var(--emoji);
 }
