@@ -147,6 +147,12 @@ article header + h2 {
   padding: 10px 6px;
   font-size: 1.1rem;
 }
+
+/*label要素の
+display（表示）をブロック単位で
+position（位置）を相対位置として適応
+padding（要素の内側にスペース）
+cursor: pointer（カーソルを指の形にする）*/
 .menu label {
   display: block;
   position: relative;
@@ -154,6 +160,10 @@ article header + h2 {
   font-size: 1.1rem;
   cursor: pointer;
 }
+/*
+content（メニュー開く）::afterの後ろに
+position（位置）：絶対位置
+*/
 .menu label::after {
   content: "❯";
   position: absolute;
@@ -164,9 +174,11 @@ article header + h2 {
 .menu label.active::after {
   color: var(--color-link);
 }
+/*
 .menu input {
   display: none;
 }
+*/
 .menu input:checked + label + ul {
   max-height: 800px;
 }
