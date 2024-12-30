@@ -159,3 +159,33 @@ article header + h2 {
 .menu label.active::after {
   color: var(--color-link);
 }
+.menu input {
+  display: none;
+}
+.menu input:checked + label + ul {
+  max-height: 800px;
+}
+.menu input:checked + label::after {
+  transform: rotate(90deg);
+}
+.menu li {
+  background: rgba(204, 204, 204, 0.1254901961);
+  margin: 0;
+}
+.menu div,
+.menu label,
+.menu li,
+.menu label.active {
+  border-bottom: 1px solid rgba(136, 136, 136, 0.4);
+}
+.menu .active {
+  font-weight: bold;
+  color: var(--color-link);
+  border-color: var(--color-link);
+}
+.menu div:hover,
+.menu label:hover,
+.menu li:hover {
+  filter: brightness(1.1);
+  transform: scale(1.01);
+}
