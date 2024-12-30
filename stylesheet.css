@@ -9,6 +9,11 @@
   --monospace: Menlo, Consolas, "DejaVu Sans Mono", monospace, var(--emoji);
 }
 
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 a {
   color: var(--color-link);
   text-decoration: none;
