@@ -27,7 +27,8 @@ header a {
   color: inherit;
 }
 header .logo {
-  height: 32px;
+  max-width: 100%;
+  height: auto;
   vertical-align: text-bottom;
   margin-right: 4px;
 }
