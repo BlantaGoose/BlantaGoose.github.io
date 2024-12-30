@@ -15,8 +15,26 @@ body {
   font-family: var(--sans-serif);
 }
 
+header {
+  width: 100%;
+}
+header h1 {
+  margin: 10px 6px;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+header a {
+  color: inherit;
+}
 header .logo {
   height: 32px;
   vertical-align: text-bottom;
   margin-right: 4px;
+}
+
+footer {
+  width: 100%;
+  color: rgba(136, 136, 136, 0.8);
+  padding: 12px 4px;
+  text-align: right;
 }
