@@ -12,7 +12,11 @@
 /*@media
 @media screen{} パソコンディスプレイで表示するとき
 @media print {} 印刷で表示するとき*/
-@media 
+@font-face {
+  font-family: "Hiragino Sans";
+  src: local("Hiragino Sans");
+  font-weight: normal;
+}
 
 /*疑似要素周りの設定*/
 *::before,
