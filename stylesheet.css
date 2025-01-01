@@ -1,3 +1,8 @@
+/*:root{}*/
+/*全体的なhtmlのスタイルを決定*/
+/*color-schemeは標準プロパティだが、カスタムプロパティはダッシュを付ける必要がある*/
+/*カスタムプロパティは他のプロパティで変数として利用可能*/
+/*--canvasで背景色。*/
 :root {
   color-scheme: light dark;
   --canvas: #fff;
@@ -9,9 +14,6 @@
   --monospace: Menlo, Consolas, "DejaVu Sans Mono", monospace, var(--emoji);
 }
 
-/*@media
-@media screen{} パソコンディスプレイで表示するとき
-@media print {} 印刷で表示するとき*/
 
 /*@font-face{
 font-family: フォントを決める
@@ -25,18 +27,19 @@ font-weight:
 }
 
 /*疑似要素周りの設定*/
+/*それぞれのセレクタの後ろに結合（blockquote::before{}など...）*/
+/*これにより、元々のセレクタによる見た目の調整に加え、アクセントを付けることが可能*/
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
-/*html {
-box-sizing: ページ全体で統一的なレイアウトにするとき、全ての要素にbox-sizing: border-box;を適用
-↑今回は::before, ::aftrでbox-sizingをinheritしている（継承している）ので、全てに適用される。変数みたいなもん
-overflow-y：縦軸方向にスクロールバーを設置
--ms-text-size-adjust、-webkit-text-size-adjust：ユーザーがズームしてもテキストサイズが固定されたままなので、意図したデザインを維持できる
-}*/
+/*html {}*/
+/*box-sizing: ページ全体で統一的なレイアウトにするとき、全ての要素にbox-sizing: border-box;を適用*/
+/*↑今回は::before, ::aftrでbox-sizingをinheritしている（継承している）ので、全てに適用される。変数みたいなもん*/
+/*overflow-y：縦軸方向にスクロールバーを設置*/
+/*-ms-text-size-adjust、-webkit-text-size-adjust：ユーザーがズームしてもテキストサイズが固定されたままなので、意図したデザインを維持できる*/
 html {
   box-sizing: border-box;
   overflow-y: scroll;
@@ -44,24 +47,22 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-/*body {
---canvas-textや--sans-serifは:rootで指定している。
-}*/
+/*body {}*/
+/*--canvas-textや--sans-serifは:rootで指定している。*/
 body {
   color: var(--canvas-text);
   background-color: rgba(204, 204, 204, 0.2666666667);
   font-family: var(--sans-serif);
 }
 
-/*a{}は、a要素のデザインを指定。
-a href等*/
+/*a{}は、a要素のデザインを指定。a href等*/
 a {
   color: var(--color-link);
   text-decoration: underline;
 }
 
-/*ul：無秩序リスト、ol:秩序リスト
-padding-inline-start：ブラウザの言語が「左から右」のとき、左側の余白設定*/
+/*箇条書きを作る。ul：無秩序リスト、ol:秩序リスト*/
+/*padding-inline-start：ブラウザの言語が「左から右」のとき、左側の余白設定*/
 ul,
 ol {
   padding-inline-start: 1.7rem;
@@ -78,15 +79,15 @@ li p {
   margin-block: 0.5em;
 }
 
-/*htmlにコードブロックを挿入するときなどに活躍
-code要素を定義。monospaceで表示することで可読性を向上*/
+/*htmlにコードブロックを挿入するときなどに活躍*/
+/*code要素を定義。monospaceで表示することで可読性を向上*/
 code {
   font-family: var(--monospace);
   font-size: 0.85em;
 }
-/*pre：複数行のコードブロックを挿入する際に活用
-not(pre)で一行だけのcode。pre要素以外のcodeを指定するとき
-pre {}は、複数行のcode。preを指定するとき。*/
+/*pre：複数行のコードブロックを挿入する際に活用*/
+/*not(pre)で一行だけのcode。pre要素以外のcodeを指定するとき*/
+/*pre {}は、複数行のcode。preを指定するとき。*/
 :not(pre) > code {
   background-color: rgba(153, 153, 153, 0.0941176471);
   padding: 0.12rem 0.24rem;
@@ -118,16 +119,16 @@ highlight + pre：highlightの直後にpreがあるとき
 }
 */
 
-/*kbd：キーボード入力に適用
-display: inline-blockで、表示の際にブロックっぽくする
-font-size: 0.7emで、親要素の70%の大きさのフォントにする
-padding：上下余白を1px、左右余白を5px
-margin：↑→↓←の順に外側に余白
-box-shadow：内側に陰影を設定して、要素を立体っぽくする
-内側（inset）に、第一引数0＝水平方向の影はなし、第二引数-1px＝垂直方向に-1px、第三引数0＝ぼかしはなし
-0.533333...は透明度
-border：1pxのsolid line（実線）で境界線を引く
-border-radius：境界線の角を丸める。3px半径で丸める*/
+/*kbd：キーボード入力に適用*/
+/*display: inline-blockで、表示の際にブロックっぽくする*/
+/*font-size: 0.7emで、親要素の70%の大きさのフォントにする*/
+/*padding：上下余白を1px、左右余白を5px*/
+/*margin：↑→↓←の順に外側に余白*/
+/*box-shadow：内側に陰影を設定して、要素を立体っぽくする*/
+/*内側（inset）に、第一引数0＝水平方向の影はなし、第二引数-1px＝垂直方向に-1px、第三引数0＝ぼかしはなし*/
+/*0.533333...は透明度*/
+/*border：1pxのsolid line（実線）で境界線を引く*/
+/*border-radius：境界線の角を丸める。3px半径で丸める*/
 kbd {
   display: inline-block;
   vertical-align: middle;
@@ -172,7 +173,70 @@ dl dd::before {
   left: -0.8em;
 }
 
+/*table（HTML内の表）、thead（表のヘッダ）、th（ヘッダのセル）、td（データのセル）*/
+/*border-spacingでセルとセルの間に4pxのスペースを挿入。セル同士を離して見やすく*/
+/*thとtdにpaddingを設定することで、要素がセルの端にくっつかず、見やすい*/
+table {
+  box-shadow: 0 0 8px rgba(136, 136, 136, 0.4);
+  border-spacing: 4px;
+}
 
+thead {
+  background: rgba(136, 136, 136, 0.2);
+}
+
+th,
+td {
+  padding: 2px 4px;
+}
+
+/*blockquote：引用ブロック*/
+/*padding-inlineで左側に24pxのインデント、border-leftで2pxのsolid line*/
+/*::afterで、content"”"で引用符を追加*/
+blockquote {
+  margin: 8px 0;
+  padding-block: 4px 1px;
+  padding-inline: 24px 0;
+  border-left: solid 2px rgba(136, 136, 136, 0.5333333333);
+  position: relative;
+}
+blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -10px;
+  left: 8px;
+  font-size: 2.4rem;
+  font-family: var(--serif);
+  color: rgba(136, 136, 136, 0.8);
+}
+/*svg画像を処理*/
+/*hover（カーソルが乗ったとき）の挙動を適用*/
+/*scale（サイズ）を1.3倍に拡大*/
+a svg:hover {
+  transform: scale(1.3);
+}
+
+/*body要素にフレックスボックスを実装*/
+/*displayをflexコンテナとし、flex-flowで要素をrow（横並べ）、要素がコンテナ幅を超えたとき、次の行にwrap（折り返す）*/
+/*flex-directionで、アイテムをrowのreverse（右から左へ）で並べる*/
+/*justify-contentで空白を均等分配（space-between）し、align-itemsで要素を各行の開始位置に配置、align-contentで複数行の要素をコンテナ内の開始位置（上端）に配置*/
+/*max-widthで最大幅を1080pxに。ユーザの画面が大きくてもマックス1080px*/
+/*line-heightで行間を1.5倍に*/
+body {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  min-height: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
+  line-height: 1.5;
+}
+
+/*header関連の編集*/
 header {
   width: 100%;
 }
@@ -191,6 +255,7 @@ header .logo {
   margin-right: 4px;
 }
 
+/*footer関連の編集*/
 footer {
   width: 100%;
   color: rgba(136, 136, 136, 0.8);
@@ -204,6 +269,7 @@ main,
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 
+/*html内のmainや.menu、#search-formに適用する*/
 .side-bar {
   width: 200px;
 }
@@ -247,20 +313,10 @@ article h2::before {
 article header + h2 {
   margin-block-start: 1em;
 }
-
-@media (max-width: 650px) {
-  body {
-    padding: 0;
-    font-size: 0.9rem;
-  }
-  .side-bar {
-    width: 100%;
-    margin: 12px 8px;
-  }
-  main {
-    max-width: 100%;
-  }
+article a:hover {
+  text-decoration: underline;
 }
+
 
 .menu {
   background-color: var(--canvas);
@@ -299,10 +355,8 @@ cursor: pointer（カーソルを指の形にする）*/
   font-size: 1.1rem;
   cursor: pointer;
 }
-/*
-content（メニュー開く）::afterの後ろに
-position（位置）：絶対位置
-*/
+/*content（メニュー開く）::afterの後ろに*/
+/*position（位置）：絶対位置*/
 .menu label::after {
   content: "❯";
   position: absolute;
@@ -313,8 +367,7 @@ position（位置）：絶対位置
 .menu label.active::after {
   color: var(--color-link);
 }
-/*
-.menu input {
+/*.menu input {
   display: none;
 }
 */
@@ -346,27 +399,41 @@ position（位置）：絶対位置
   transform: scale(1.01);
 }
 
-/*
-blockquoteは引用スタイルを指定*/
-blockquote {
-  margin: 8px 0;
-  padding-block: 4px 1px;
-  padding-inline: 24px 0;
-  border-left: solid 2px rgba(136, 136, 136, 0.5333333333);
-  position: relative;
+/*HTML内のid="search-formをスタイル*/
+/*HTML内の<input placeholder=""/>を指定*/
+#search-form {
+  margin-block: 16px 0;
 }
-blockquote::before {
-  content: "“";
-  position: absolute;
-  top: -10px;
-  left: 8px;
-  font-size: 2.4rem;
-  font-family: var(--serif);
-  color: rgba(136, 136, 136, 0.8);
+#search-form input {
+  font-size: 0.88rem;
+  padding: 4px 6px;
+  width: 100%;
+  border: none;
+}
+#search-form input::placeholder {
+  opacity: 0.66;
 }
 
-/*画面幅が650px以下の時
-スマホなどで見るとき*/
+
+/*@media*/
+/*@media screen{} パソコンディスプレイで表示するとき*/
+/*以下は画面幅が650px以下の時*/
+/*スマホなどで見るとき*/
+@media (max-width: 650px) {
+  body {
+    padding: 0;
+    font-size: 0.9rem;
+  }
+  .side-bar {
+    width: 100%;
+    margin: 12px 8px;
+  }
+  main {
+    max-width: 100%;
+  }
+}
+
+
 @media (max-width: 650px) {
   body {
     padding: 0;
