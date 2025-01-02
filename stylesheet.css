@@ -29,6 +29,7 @@ font-weight:
 /*疑似要素周りの設定*/
 /*それぞれのセレクタの後ろに結合（blockquote::before{}など...）*/
 /*これにより、元々のセレクタによる見た目の調整に加え、アクセントを付けることが可能*/
+/*htmlにはbeforeを付けなくて良い。例えばdd:beforeはhtmlでは<dd>の要素のbefore（前）に指定するもの*/
 *,
 *::before,
 *::after {
@@ -141,33 +142,34 @@ kbd {
   border-radius: 3px;
 }
 
-/*
-dl：定義リスト。dt：定義リストのタイトル。dd：定義リストの内容
-dl dt {}：font-weight: boldでタイトルを太字に
-margin-block-start：でタイトル要素の上に余白
-dl dd {}：
-margin-inlineで、左に1emの余白、右側は0で、インデントする
-position: relative：ddを基準とした相対位置として設定。::beforeを配置
-dl dd p {}：
-dd内の段落（p）に余白
-dl dd::before{}：
-ddの前に”：”を追加する。opacity（透明度）0.25%
-*/
-
+/*dl直下の全てのdtやdd要素のスタイル*/
+/*dl：定義リスト。dt：定義リストのタイトル。dd：定義リストの内容*/
+/*dl dt {}：font-weight: boldでタイトルを太字に*/
+/*margin-block-start：でタイトル要素の上に余白*/
 dl dt {
   font-weight: bold;
   margin-block-start: 1em;
 }
+
+/*dl dd {}：*/
+/*margin-inlineで、左に1emの余白、右側は0で、インデントする*/
+/*position: relative：ddを基準とした相対位置として設定。::beforeを配置*/
 dl dd {
   margin-block: 0.3em;
   margin-inline: 1em 0;
   position: relative;
 }
+
+/*dl dd p {}：*/
+/*dd内の段落（p）に余白*/
 dl dd p {
   margin-block: 0.3em;
 }
+
+/*dl dd::before{}：*/
+/*ddの前に”：”を追加する。opacity（透明度）0.25%*/
 dl dd::before {
-  content: "*";
+  content: ":";
   opacity: 0.25;
   position: absolute;
   left: -0.8em;
