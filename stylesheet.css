@@ -6,14 +6,13 @@
 :root {
   color-scheme: light dark;
   --canvas: #fff;
-  --canvas-text: #444;
-  --color-link: #429131;
+  --canvas-text: #4B5960;
+  --color-link: #56B4E9;
   --emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans Emoji";
   --serif: Palatino, serif, var(--emoji);
   --sans-serif: "Segoe UI", "Yu Gothic Medium", system-ui, "HiraginoSans", sans-serif, var(--emoji);
   --monospace: Menlo, Consolas, "DejaVu Sans Mono", monospace, var(--emoji);
 }
-
 
 /*@font-face{
 font-family: フォントを決める
@@ -60,6 +59,9 @@ body {
 a {
   color: var(--color-link);
   text-decoration: underline;
+}
+a:visited{
+  color: gray;
 }
 
 /*箇条書きを作る。ul：無秩序リスト、ol:秩序リスト*/
