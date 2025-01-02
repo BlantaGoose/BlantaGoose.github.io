@@ -416,7 +416,7 @@ cursor: pointer（カーソルを指の形にする）*/
   opacity: 0.66;
 }
 #search-form::before {
-  content: "\1DF50D";
+  content: "\1F50D";
   position: absolute;
   left: 8px;
   color: gray;
