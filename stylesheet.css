@@ -417,7 +417,9 @@ cursor: pointer（カーソルを指の形にする）*/
 }
 #search-form::before {
   content: "\1F50D";
+  font-family: "Segoe UI Emoji", sans-serif;
   position: absolute;
+  font-size: 1rem;
   left: 8px;
   color: gray;
 }
