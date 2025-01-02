@@ -405,10 +405,12 @@ cursor: pointer（カーソルを指の形にする）*/
 /*HTML内の<input placeholder=""/>を指定*/
 #search-form {
   margin-block: 16px 0;
+  position: relative;
 }
 #search-form input {
   font-size: 0.88rem;
   padding: 4px 6px;
+  padding-left: 24px;
   width: 100%;
   border: none;
 }
@@ -419,8 +421,10 @@ cursor: pointer（カーソルを指の形にする）*/
   content: "\1F50D";
   font-family: "Segoe UI Emoji", sans-serif;
   position: absolute;
+  transform: translateY(-50%);
   font-size: 1rem;
   left: 8px;
+  top: 50%;
   color: gray;
 }
 
