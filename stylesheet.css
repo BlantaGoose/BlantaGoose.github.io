@@ -415,6 +415,12 @@ cursor: pointer（カーソルを指の形にする）*/
 #search-form input::placeholder {
   opacity: 0.66;
 }
+#search-form::before {
+  content: "\1DF50D";
+  position: absolute;
+  left: 8px;
+  color: gray;
+}
 
 
 /*@media*/
