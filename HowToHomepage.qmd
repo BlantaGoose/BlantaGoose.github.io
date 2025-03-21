@@ -1,0 +1,49 @@
+---
+title: "HowToHomepage"
+format: html
+editor: visual
+---
+
+## GitHubでホムペ作りたい
+
+### VScodeで並べるとやりやすい
+
+Rstudioでもできるっぽいけど、VScodeでやる。必要なのは以下の二つのファイル
+
+-   HTMLファイル：内容を書く
+
+-   CSSファイル：装飾
+
+### GitHubに送る
+
+基本はVScodeで上二つを編集して、いちいちcommitする感じ
+
+```{r}
+git init
+git add *
+git commit -m ""
+git push origin main
+```
+
+#### 作業ディレクトリ
+
+```{r}
+mkdir ~/Desktop/github.io
+cd ~/Desktop/github.io
+nano index.html
+nano stylesheet.css
+
+```
+
+#### 画像を挿入する。
+
+1.  サーバーに画像をアップロード\
+    自分のディレクトリに画像を持ってくる。
+
+```{r}
+mkdir ~/Desktop/github.io/Pictures
+mv ~/Pictures/<<pictures>>.png ./Pictures
+git add ./Pictures/<<pictures>>.png
+```
+
+1.  cssファイルに読み込み
